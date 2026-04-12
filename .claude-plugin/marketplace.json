@@ -1,0 +1,14 @@
+{
+  "name": "obris",
+  "owner": {
+    "name": "Obris",
+    "url": "https://obris.ai"
+  },
+  "plugins": [
+    {
+      "name": "obris",
+      "source": "./",
+      "description": "Connect your Obris knowledge base to Claude. Access topics via MCP, sync files to local directories via the Obris CLI."
+    }
+  ]
+}

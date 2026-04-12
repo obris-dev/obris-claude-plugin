@@ -1,0 +1,12 @@
+{
+  "name": "obris",
+  "description": "Connect your Obris knowledge base to Claude. Access topics and knowledge via MCP, sync files to local directories via CLI.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Obris",
+    "url": "https://obris.ai"
+  },
+  "homepage": "https://obris.ai",
+  "repository": "https://github.com/obris-dev/obris",
+  "mcpServers": "./.mcp.json"
+}
