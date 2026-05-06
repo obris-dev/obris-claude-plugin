@@ -20,7 +20,22 @@ Add a local file to a synced topic using the `obris` CLI.
 obris sync add <filepath> -t <topic-id>
 ```
 
-If the directory is synced to exactly one topic, the `-t` flag is optional — it auto-detects.
+If the directory is synced to exactly one topic, the `-t` flag is
+optional — it auto-detects.
+
+### When to use this vs. `--add-all`
+
+Per-file `obris sync add` is the right call for **one or two
+specific files**. For **bulk operations** — onboarding a whole
+directory, picking up every new file the user just dropped in —
+use `--add-all` on the sync command instead, which batches into a
+single bulk request and creates subtopics for any new subdirs:
+
+```bash
+obris sync -p <directory> --add-all
+```
+
+See the `/obris:sync` skill for the full bulk flow.
 
 ### Steps
 
@@ -35,3 +50,4 @@ If the directory is synced to exactly one topic, the `-t` flag is optional — i
 - The file must exist on disk
 - If the file is already tracked by the topic, the CLI will tell you — use `obris sync` to push edits instead
 - After adding, the file is tracked and will sync on future `obris sync` runs
+- If the file matches a default exclusion (e.g., `.env`, `.DS_Store`), `obris sync add` still works — it bypasses the exclusion list since the user explicitly named the file

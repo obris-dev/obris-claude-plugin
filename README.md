@@ -5,10 +5,17 @@ Connect your [Obris](https://obris.ai) knowledge base to Claude Code.
 Provides:
 
 - **MCP server** — list topics, read items, save knowledge, and capture feedback from any Claude Code session
-- **`/obris:sync`** — sync a topic to a local directory (pulls remote items, pushes local edits)
-- **`/obris:add`** — push a local file into a synced topic
+- **`/obris:sync`** — sync a topic to a local directory (pulls remote items, pushes local edits, bulk-uploads via `--add-all`, exclude/include rules per directory)
+- **`/obris:add`** — push a single local file into a synced topic
 - **`/obris:link`** — relink a renamed file to its remote item
 - **`/obris:auth`** — set up Obris CLI authentication
+
+## Common workflows
+
+- **Bootstrap a new directory into a topic.** Find or create the topic, then `obris sync -p <dir> -t <id> --add-all`. Subdirs become subtopics; files in `.env`, `.ssh/`, `.aws/`, `.git/` etc. are skipped by default.
+- **Pull a topic down to inspect its files.** `obris sync -p <dir> -t <id>` with no `--add-all`. Pulls every item; doesn't upload local files.
+- **Keep a working directory synced.** Just `obris sync -p <dir>` — no flags. It picks up local edits and remote changes, surfaces conflicts, and reports new untracked files without uploading them.
+- **Override a default exclusion** (e.g., a `.env.example` you actually do want synced). `obris sync include .env.example -p <dir>`. Last-call-wins; the inverse is `obris sync exclude`.
 
 ## Install
 
