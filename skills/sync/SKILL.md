@@ -69,6 +69,24 @@ obris sync -p <directory> --add-all
 For a single file, the per-file path is also fine (see
 `/obris:add`).
 
+## Unlinking a file
+
+When the user wants to stop syncing a file but keep both copies
+intact, use unlink:
+
+```bash
+obris sync unlink <file-or-knowledge-id>
+obris sync unlink notes.md draft.md           # multiple at once
+```
+
+Both the local file and the remote item stay where they are — the
+CLI just removes the link so subsequent `obris sync` calls won't
+re-pull or push the item. Re-link later with `/obris:link` or
+`/obris:add`.
+
+This is different from `obris knowledge delete <id>`, which
+permanently deletes the remote item.
+
 ## Including a skipped file
 
 If `obris sync` shows a file as untracked but `--add-all` skips it,

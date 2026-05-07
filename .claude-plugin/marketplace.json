@@ -8,7 +8,7 @@
     {
       "name": "obris",
       "source": "./",
-      "description": "Connect your Obris knowledge base to Claude. Access topics via MCP, sync files to local directories via the Obris CLI."
+      "description": "Connect your Obris knowledge base to Claude Code or Cowork. Access topics via MCP, sync files to local directories via the Obris CLI."
     }
   ]
 }

@@ -22,7 +22,7 @@ obris sync link <filepath> -i <item-id> -t <topic-id>
 
 ### When to use
 
-When a user renames a synced file, the next sync untracks it and shows:
+When a user renames a synced file, the next sync unlinks it and shows:
 
 ```
 Missing: old-name.md (was synced to "old-name.md")
