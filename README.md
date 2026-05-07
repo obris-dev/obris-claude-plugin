@@ -1,7 +1,20 @@
-# Obris Claude Plugin
+<p align="center">
+  <a href="https://obris.ai">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./.assets/obris-logo-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./.assets/obris-logo-dark.svg">
+      <img src="./.assets/obris-logo-dark.svg" alt="Obris" width="200">
+    </picture>
+  </a>
+</p>
 
-Connect your [Obris](https://obris.ai) knowledge base to Claude. Works in
-Claude Code (the terminal CLI) and in Cowork (the desktop and web app).
+<p align="center">
+  Use Obris in Claude Code and Cowork.
+</p>
+
+<p align="center">
+  <a href="https://github.com/obris-dev/obris-claude-plugin/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
+</p>
 
 The plugin's goal is to sync your Obris knowledge to disk through the
 `obris` CLI, where Claude can read your topics as files. That's faster
