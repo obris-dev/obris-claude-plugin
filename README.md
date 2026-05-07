@@ -27,10 +27,11 @@ Provides:
 - **MCP server**: List topics, read items, and save knowledge from any
   Claude Code or Cowork session.
 - **`/obris:sync`**: Sync a topic to a local directory (pulls remote
-  items, pushes local edits, bulk-uploads via `--add-all`, unlinks
-  tracked files, manages exclude/include rules per directory).
+  items, pushes local edits, bulk-uploads via `--add-all`, manages
+  exclude/include rules per directory).
 - **`/obris:add`**: Push a single local file into a synced topic.
 - **`/obris:link`**: Relink a renamed file to its remote item.
+- **`/obris:unlink`**: Stop syncing a file without deleting either side.
 - **`/obris:auth`**: Set up Obris CLI authentication.
 
 ## Common workflows
