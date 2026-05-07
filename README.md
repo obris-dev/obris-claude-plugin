@@ -73,7 +73,7 @@ Reload to pick up the skills and MCP server:
 /reload-plugins
 ```
 
-### In Cowork (desktop or web)
+### In Cowork
 
 Cowork doesn't ship a discoverable marketplace, so you add the Obris
 marketplace by hand the first time:
@@ -82,6 +82,8 @@ marketplace by hand the first time:
 2. Click the **+** next to **Personal Plugins** and choose **Add Marketplace**.
 3. Paste `obris-dev/obris-claude-plugin` (a GitHub `owner/repo`, or the
    full git URL) and click **Sync**.
+4. Open **Browse Plugins → Personal**, click **obris-claude-plugin**,
+   and hit **+** to install.
 
 ## Enable the MCP server (one-time auth)
 
